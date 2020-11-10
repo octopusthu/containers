@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    configserver:
+        image: octopusthu/configserver
+        container_name: configserver
+        restart: always
+        # command:
+        ports:
+            - "8888:8888"
+        volumes:
+            - ${APPLICATIONS_HOME}/configserver/config:/app/config:ro
+        environment:
+            - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+            - TZ=${TZ}
