@@ -1,0 +1,11 @@
+version: "3"
+services:
+  jenkins:
+    image: coredns/coredns:latest
+    volumes:
+      - /var/jenkins_home:/var/jenkins_home
+    ports:
+      - "172.24.196.243:53:53/udp"
+      - "172.24.196.243:53:53"
+    restart: always
+    container_name: coredns
