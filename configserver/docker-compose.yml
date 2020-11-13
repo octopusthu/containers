@@ -6,7 +6,7 @@ services:
         restart: always
         # command:
         ports:
-            - "8888:8888"
+            - "127.0.0.1:8888:8888"
         volumes:
             - ${APPLICATIONS_HOME}/configserver/config:/app/config:ro
         environment:
